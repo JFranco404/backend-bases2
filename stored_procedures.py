@@ -6,4 +6,3 @@ def SP_HISTORIAL_VIAJES_CAMION(cursor):
     procedure_params = {'V_PLACA': placa}
     cursor.callproc('SP_HISTORIAL_VIAJES_CAMION', keywordParameters=procedure_params)
 
-
