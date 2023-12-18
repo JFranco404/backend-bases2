@@ -28,3 +28,15 @@ def FnCiudadMasViajes():
 def FnCargaMasTransportada():
     print("se está consultando la carga más transportada...")
     return cursor.callfunc("FnCargaMasTransportada", cx_Oracle.STRING, [])
+def DetallesConductor():
+    print("Ingrese la cedula del conductar el cual quiere consultar su información")
+    cedula = input()
+    return cursor.callfunc("DetallesConductor", cx_Oracle.STRING, [cedula])
+
+
+def SF_CONTAR_TURNOS_JORNADA():
+    return cursor.callfunc("SF_CONTAR_TURNOS_JORNADA", cx_Oracle.NUMBER)
+
+
+def SF_CAMION_CON_MAS_VIAJES():
+    return cursor.callfunc("SF_CAMION_CON_MAS_VIAJES", cx_Oracle.STRING)
