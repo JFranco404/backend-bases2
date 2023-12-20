@@ -33,9 +33,9 @@ def FnCargaMasTransportada():
 
 
 def DetallesConductor():
-    print("Ingrese la cedula del conductar el cual quiere consultar su información")
+    print("Ingrese la cedula del conductor el cual quiere consultar su información")
     cedula = input()
-    return cursor.callfunc("DetallesConductor", cx_Oracle.STRING, [cedula])
+    return cursor.callfunc("DETALLES_CONDUCTOR", cx_Oracle.STRING, [cedula])
 
 
 def SF_CONTAR_TURNOS_JORNADA():
@@ -44,3 +44,9 @@ def SF_CONTAR_TURNOS_JORNADA():
 
 def SF_CAMION_CON_MAS_VIAJES():
     return cursor.callfunc("SF_CAMION_CON_MAS_VIAJES", cx_Oracle.STRING)
+
+
+def ConductoresAsignadosACamion():
+    print("Ingrese la placa para conocer los conductores asignados a un camión > ")
+    cedula = input()
+    return cursor.callfunc("ConductoresAsignadosACamion", cx_Oracle.STRING, [cedula])

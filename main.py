@@ -43,10 +43,10 @@ try:
         print("----------------------------------------------------------------------")
         print("                         Modificar información")
         print("----------------------------------------------------------------------")
-        print("23. ")
-        print("24. ")
-        print("25. ")
-        print("26. ")
+        print("23. eliminar la asignacion de un conductor a un camión")
+        print("24. actualizar el color de un camión que se pintó")
+        print("25. actualizar_conductor")
+        print("26. SP_HISTORIAL_VIAJES_CAMION")
         print("27. ")
         print("28. ")
         print("29. ")
@@ -63,29 +63,29 @@ try:
                 print("Gracias por usar EffiCargo Technologies")
                 quit()
             case '1':
-                pass
+                print(origenViaje())
             case '2':
                 print(ObtenerTiemposUltimoViaje())
             case '3':
-                pass
+                print(FnDetalleCarga())
             case '4':
-                pass
+                print(DetallesConductor())
             case '5':
-                SF_CONTAR_TURNOS_JORNADA()
+                print('La cantidad de turnos de la última jornada ha sido de: ' + str(SF_CONTAR_TURNOS_JORNADA())+ '\n')
             case '6':
-                print(SF_CIUDAD_MAYOR_CARGA())
+                print('La ciudad con mayor carga ha sido ' + SF_CIUDAD_MAYOR_CARGA()+ '\n')
             case '7':
-                pass
+                print(FnCiudadMasViajes())
             case '8':
-                pass
+                print(FnCargaMasTransportada())
             case '9':
-                SF_CAMION_CON_MAS_VIAJES
+                print(SF_CAMION_CON_MAS_VIAJES())
             case '10':
-                pass
+                print(ConductoresAsignadosACamion())
             case '11':
-                Vehiculos_en_curso()
+                print(Vehiculos_en_curso())
             case '12':
-                CamionesConductoresEnViaje()
+                print(CamionesConductoresEnViaje())
             case '13':
                 Camiones_viajes_8h7d()
             case '14':
@@ -106,8 +106,20 @@ try:
                 ViajesEntregadosFueraDeTiempoTeorico()
             case  '22':
                 ViajesEntregadosAntesDelTiempo()
-        
-
+            case  '23':
+                SP_ELIMINAR_CONDUCTOR()
+            case  '24':
+                SP_ACTUALIZAR_COLOR()
+            case  '25':
+                actualizar_conductor()
+            case  '26':
+                SP_DESPEDIR_CONDUCTOR()
+            case  '27':
+                SP_CAMBIAR_FECHA_ENTREGA()
+            case  '28':   
+                SP_HISTORIAL_VIAJES_CAMION()
+            case '29':
+                ActualizarInfoConductor()
 
 except Exception as e:
     print(e)
