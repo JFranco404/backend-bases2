@@ -27,7 +27,7 @@ def CamionesConductoresEnViaje():
 
 
 def ViajesEntregadosEnUltimas24Horas():
-    ejecutar_query('ViajesEntregadosEnUltimas24Horas')
+    ejecutar_query('VIAJESENULTIMAS24HORAS')
     mostrar_resultados()
 
 
@@ -62,7 +62,7 @@ def conductorMenosAsignaciones():
 
 
 def ViajesEntregadosFueraDeTiempoTeorico():
-    ejecutar_query('ViajesEntregadosFueraDeTiempoTeorico')
+    ejecutar_query('ViajesEntregadosTarde')
     mostrar_resultados()
 
 
