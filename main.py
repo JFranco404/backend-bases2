@@ -3,6 +3,7 @@ from triggers import *
 from stored_functions import * 
 from stored_procedures import *
 from connection import *
+from views import *
 
 
 try:
@@ -52,7 +53,7 @@ try:
             case '9':
                 SF_CAMION_CON_MAS_VIAJES
             case '10':
-                pass
+                vistaprueba()
         
 
 
